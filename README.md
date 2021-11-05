@@ -20,4 +20,11 @@
 * Used to store secret data. (password, certificate etc...)
 * base64 encoded
 
+## Volumes
+- To persist container data. Example: make data persistent in DB.
+- Normally, k8s doesn't manage data persistance. 
+
+**Deployment**
+In real case, you don't create pods. you create deployment where you define how many pods to create.
+To avoid data inconsistance `StatefulSet` is used by DB container services.
 ## Kubernate on local machine
