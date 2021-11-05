@@ -30,4 +30,22 @@
 
 **StatefulSet**
 - To avoid data inconsistance `StatefulSet` is used by DB container services.
+- Deploying `StatefulSet` is not easy in k8s.
+- **DB are often hosted outside of k8s cluster.**
+
+## Kubernate Architecture
+Consists of master node and slave nodes.
+
+Each node should have three processes running on.
+1. **Container Runtime**
+2. **Kubelet**: interect with both container and node. start a pod with container inside, allocate resounces to pod
+3. **Kube proxy**: forward request between node service.
+
+**How do you interect with k8s cluster?**
+- schedule pods
+- monitor
+- re-schedule / self-restart
+- join new nodes
+
+All these managing processes are done by `Master Nodes`
 ## Kubernate on local machine
